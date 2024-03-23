@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pouyan Taheri | Furniture Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="burger-menu">&#9776;</div>
+
+        <!-- Logo for desktop version -->
+        <div class="logo desktop-logo"><img class="logo" src="images/logo1.png"></div>
+
+        <!-- Logo for Mobile version -->
+        <div class="logo mobile-logo">ASHLEY</div>
+
+        <!-- Menu ---------------------->
+        <nav>
+            <ul>
+                <li><span class="circle"></span>Home</li>
+                <li><span class="circle"></span>Products</li>
+                <li><span class="circle"></span>About</li>
+                <li><span class="circle"></span>Contact</li>
+            </ul>
+        </nav>
+        <button class="signup-button">Cart</button>
+    </header>
+
+    <!-- Main container -->
+    <main class="">
+
+
+        <!-- Slider by using Glide library -->
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img src="images/slide1.png" alt="Slide 1" class="imgSlider">
+                        <div class="slide-content">
+                            <h1 class="slide-title">New Products</h1>
+                            <p class="slide-subtitle">Check new arrivals!</p>
+                            <button class="slide-button">discover more</button>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="images/slide2.png" alt="Slide 2" class="imgSlider">
+                        <div class="slide-content">
+                            <h1 class="slide-title">Sale 50%</h1>
+                            <p class="slide-subtitle">shop with 50% off</p>
+                            <button class="slide-button">Shop Now</button>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="images/slide3.png" alt="Slide 3" class="imgSlider">
+                        <div class="slide-content">
+                            <h1 class="slide-title">New Products</h1>
+                            <p class="slide-subtitle">Check new arrivals!</p>
+                            <button class="slide-button">Click Me</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <section id="product-gallery">
+            <canvas id="granim-canvas"></canvas>
+            <div class="products">
+                <div class="product" data-colors='["#ff6e7f", "#bfe9ff"]'>
+                    <img src="images/pro1.png" alt="Product 2">
+                    <h3>Product 1</h3>
+                </div>
+                <div class="product" data-colors='["#ffbd69", "#ff6363"]'>
+                    <img src="images/pro2.png" alt="Product 2">
+                    <h3>Product 2</h3>
+                </div>
+                <div class="product" data-colors='["#ffbd69", "#ff6363"]'>
+                    <img src="images/pro3.png" alt="Product 3">
+                    <h3>Product 3</h3>
+                </div>
+            </div>
+        </section>
+        
+        <!-- store location by using Leaflet -->
+        <div id="store-location-map" class="map-container"></div>
+
+
+
+    </main>
+
+    <!------- Footer Desktop ------------------------------------------->
+    <footer class="footer-desktop">
+        <div class="footer-top">
+            <div class="follow-us">
+                <h2 id="footerTitle">FOLLOW US</h2>
+                <div class="social-icons">
+                    <img src="images/Frame.png">
+                </div>
+            </div>
+            <div class="contact-info">
+                <h2 id="footerTitle">CONTACT US</h2>
+                <p>info@ashley.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="information">
+                <h2 id="footerTitle">INFORMATION</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h2 id="footerTitle">KEEP IN TOUCH</h2>
+                <form>
+                    <input type="text" placeholder="Your name" />
+                    <input type="email" placeholder="E-mail" />
+                    <textarea placeholder="Leave your message"></textarea>
+                    <button id="sendB" type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!------- Footer Mobile ------------------------------------------->
+
+    <footer class="footer-mobile">
+        <p id="footer-copyR">Copyright © 2018 • Your Company
+            All rights reserved</p>
+        <p id="footerEmail">info@ashley.com</p>
+        <div class="social-icons-mobile">
+            <img src="images/SMmobile.png">
+        </div>
+        </div>
+
+        </div>
+    </footer>
+
+
+
+
+        <!-- Glide.js Slider Library -->
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/granim"></script>
+        <script src="main.js"></script>
+
+</body>
+
+</html>
